@@ -15,8 +15,6 @@ namespace CsharpTestTask.figures
         #endregion
 
         #region Constructors
-        /// <summary>
-        /// </summary>
         /// <param name="radius">Радиус круга</param>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public Circle(double radius)

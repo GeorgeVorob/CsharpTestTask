@@ -22,7 +22,7 @@ namespace Tests
             {
                 Circle cir = new(-5);
             }
-            catch (ArgumentOutOfRangeException ex)
+            catch (ArgumentOutOfRangeException)
             {
                 Assert.True(true);
                 return;

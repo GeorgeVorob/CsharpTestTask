@@ -38,19 +38,19 @@ namespace CsharpTestTask.figures
         #endregion
 
         #region Public Methods
-        /// <param name="radius">Радиус круга</param>
         public override double GetArea()
         {
+            // Полупериметр треугольника
             double p = (_sideA + _sideB + _sideC) / 2;
-            double area = Math.Sqrt(p * (p - _sideA) * (p - _sideB) * (p - _sideC));
-            return area;
+
+            return Math.Sqrt(p * (p - _sideA) * (p - _sideB) * (p - _sideC));
         }
 
         /// <summary>
         /// Возвращает признак, является-ли треугольник прямоугольным
         /// </summary>
         /// <returns>Признак, является-ли треугольник прямоугольным</returns>
-        public bool isRight()
+        public bool IsRight()
         {
             // Через серию проверок находим потенциальную гипотенузу
             double gip = _sideA;

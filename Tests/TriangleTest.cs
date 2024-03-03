@@ -22,7 +22,7 @@ namespace Tests
             {
                 Triangle trig = new(1, 0, -1);
             }
-            catch (Exception ex)
+            catch (ArgumentException)
             {
                 Assert.True(true);
                 return;
@@ -37,7 +37,7 @@ namespace Tests
             {
                 Triangle trig = new(200, 100, 5);
             }
-            catch (Exception ex)
+            catch (ArgumentException)
             {
                 Assert.True(true);
                 return;
@@ -50,14 +50,14 @@ namespace Tests
         public void TriangleIsRightTest1()
         {
             Triangle trig = new(3, 4, 5);
-            Assert.True(trig.isRight());
+            Assert.True(trig.IsRight());
         }
 
         [Fact]
         public void TriangleIsRightTest2()
         {
             Triangle trig = new(46, 29, 51);
-            Assert.False(trig.isRight());
+            Assert.False(trig.IsRight());
         }
     }
 }
