@@ -15,9 +15,14 @@ namespace CsharpTestTask.figures
         #endregion
 
         #region Constructors
+        /// <summary>
+        /// </summary>
         /// <param name="radius">Радиус круга</param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public Circle(double radius)
         {
+            if (radius <= 0)
+                throw new ArgumentOutOfRangeException("Радиус не может быть меньше или равен нулю");
             _radius = radius;
         }
         #endregion
@@ -27,7 +32,7 @@ namespace CsharpTestTask.figures
         ///<inheritdoc cref="Figure.GetArea"/>
         public override double GetArea()
         {
-            return 2 * Math.PI * _radius;
+            return Math.PI * Math.Pow(_radius, 2);
         }
         #endregion
     }
