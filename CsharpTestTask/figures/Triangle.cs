@@ -16,6 +16,7 @@ namespace CsharpTestTask.figures
 
         #region Constructors
         /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentException"></exception>
         public Triangle(double sideA, double sideB, double sideC)
         {
             if (sideA <= 0 || sideB <= 0 || sideC <= 0)
